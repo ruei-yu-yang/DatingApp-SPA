@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   values: any;
-  registerMode = false;
+  registerMode = true;
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
@@ -28,5 +28,9 @@ export class HomeComponent implements OnInit {
         console.log(error);
       }
     );
+  }
+
+  cancelRegisterMode(registerMode: boolean) {
+    this.registerMode = registerMode;
   }
 }

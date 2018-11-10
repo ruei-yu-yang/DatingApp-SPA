@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { ValueComponent } from './value/value.component';
+import { AuthService } from './_services/auth.service';
 
 @NgModule({
    declarations: [
@@ -17,7 +18,9 @@ import { ValueComponent } from './value/value.component';
       HttpClientModule,
       FormsModule
    ],
-   providers: [],
+   providers: [
+     AuthService
+   ],
    bootstrap: [
       AppComponent
    ]

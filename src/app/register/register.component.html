@@ -20,15 +20,15 @@
   </div>
 
   <div class="form-group">
-    <input [ngClass]="{'is-invalid': registerForm.get('knownAs').errors && registerForm.get('knownAs').touched}" class="form-control"
-      placeholder="Known as" formControlName="knownAs">
-    <div class="invalid-feedback" *ngIf="registerForm.get('knownAs').touched && registerForm.get('knownAs').hasError('required')">Known
+    <input [ngClass]="{'is-invalid': registerForm.get('knowAs').errors && registerForm.get('knowAs').touched}" class="form-control"
+      placeholder="Known as" formControlName="knowAs">
+    <div class="invalid-feedback" *ngIf="registerForm.get('knowAs').touched && registerForm.get('knowAs').hasError('required')">Known
       as is required</div>
   </div>
 
   <div class="form-group">
     <input [ngClass]="{'is-invalid': registerForm.get('dateOfBirth').errors && registerForm.get('dateOfBirth').touched}"
-      class="form-control" placeholder="Date of Birth" formControlName="dateOfBirth" type="date">
+      class="form-control" placeholder="Date of Birth" formControlName="dateOfBirth" type="text" bsDatepicker [bsConfig]="bsConfig">
     <div class="invalid-feedback" *ngIf="registerForm.get('dateOfBirth').touched && registerForm.get('dateOfBirth').hasError('required')">Date
       of Birth is required</div>
   </div>
